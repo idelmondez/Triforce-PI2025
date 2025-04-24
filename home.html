@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>3Force - Loja de Esportes</title>
+  <style>
+
+    
+
+    :root {
+      --cor-primaria: #ff6600;
+      --cor-secundaria: #333;
+      --cor-fundo: #f6f6f6;
+      --cor-clara: #ffffff;
+      --cor-rodape: #fff;
+      --cor-texto-rodape: #333;
+      --cor-linha: #ff6600;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--cor-clara);
+      color: var(--cor-secundaria);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1em;
+    }
+
+    .top-nav {
+      background: var(--cor-clara);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em 0;
+      border-bottom: 2px solid var(--cor-fundo);
+    }
+
+    .logo {
+      font-weight: bold;
+      color: var(--cor-primaria);
+      font-size: 1.8em;
+    }
+
+    .logo span {
+      color: var(--cor-secundaria);
+    }
+
+    .search {
+      width: 50%;
+      padding: 0.6em 1em;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      font-size: 1em;
+    }
+
+    .icons a {
+      margin: 0 0.5em;
+      font-size: 1.4em;
+      color: var(--cor-secundaria);
+      text-decoration: none;
+    }
+
+    .banner {
+      width: 100%;
+      height: 300px;
+      background: url('banner.jpg') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .banner-text {
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 2em;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    .banner-text h2 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+
+    .banner-text p {
+      font-size: 1.2em;
+      margin: 0.5em 0;
+    }
+
+    .banner-text button {
+      margin-top: 1em;
+      background: var(--cor-primaria);
+      border: none;
+      padding: 0.6em 1.4em;
+      color: white;
+      font-weight: bold;
+      font-size: 1em;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .banner-text button:hover {
+      background: #e65c00;
+    }
+
+    .benefits {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 1em 0;
+      background: var(--cor-fundo);
+      font-size: 0.95em;
+      text-align: center;
+    }
+
+    .benefits div {
+      padding: 0.5em;
+      color: var(--cor-secundaria);
+      font-weight: 500;
+    }
+
+    .categorias {
+      display: flex;
+      justify-content: space-between;
+      gap: 1em;
+      padding: 2em 0;
+    }
+
+    .categoria {
+      flex: 1;
+      height: 120px;
+      background: var(--cor-primaria);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 1.3em;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .categoria:hover {
+      background: #e65c00;
+    }
+
+    .ofertas-relampago {
+      padding: 2em 0;
+      text-align: center;
+      background-color: #fafafa;
+      border-top: 2px solid var(--cor-fundo);
+      border-bottom: 2px solid var(--cor-fundo);
+    }
+
+    .ofertas-relampago h2 {
+      color: var(--cor-primaria);
+      font-size: 2em;
+    }
+
+    .produtos {
+      display: flex;
+      justify-content: space-between;
+      gap: 1em;
+      margin-top: 2em;
+      flex-wrap: wrap;
+    }
+
+    .produto {
+      background: var(--cor-fundo);
+      padding: 1em;
+      flex: 1;
+      min-width: 280px;
+      max-width: 32%;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      border-radius: 6px;
+      transition: transform 0.2s;
+    }
+
+    .produto:hover {
+      transform: translateY(-5px);
+    }
+
+    .produto img {
+      max-width: 70%;
+      height: auto;
+      margin-bottom: 1em;
+    }
+
+    .produto h3 {
+      color: var(--cor-secundaria);
+      font-size: 1.1em;
+      margin-bottom: 0.5em;
+    }
+
+    .produto p {
+      margin: 0.2em 0;
+      font-size: 0.95em;
+    }
+
+    footer {
+      background: var(--cor-rodape);
+      color: var(--cor-texto-rodape);
+      padding: 2em 1em 1em 1em;
+      border-top: 2px solid var(--cor-linha);
+      font-size: 0.9em;
+    }
+
+    .footer-columns {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto 2em;
+    }
+
+    .footer-column {
+      flex: 1;
+      min-width: 200px;
+      margin: 1em;
+    }
+
+    .footer-column h4 {
+      margin-bottom: 0.5em;
+      font-size: 1em;
+      color: var(--cor-primaria);
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 0.4em;
+      color: var(--cor-secundaria);
+      cursor: pointer;
+    }
+
+    .footer-column ul li:hover {
+      color: var(--cor-primaria);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #ccc;
+      text-align: center;
+      padding-top: 1em;
+      color: #777;
+    }
+
+    .footer-social-icons {
+      text-align: center;
+      margin: 1em 0;
+    }
+
+    .footer-social-icons a {
+      margin: 0 0.5em;
+      color: var(--cor-secundaria);
+      font-size: 1.4em;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .top-nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .search {
+        width: 100%;
+        margin-top: 1em;
+      }
+
+      .produtos {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .produto {
+        max-width: 100%;
+      }
+
+      .categorias {
+        flex-direction: column;
+      }
+
+      .categoria {
+        margin-bottom: 1em;
+      }
+
+      .footer-columns {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer-column {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="top-nav">
+      <div class="logo">3<span>Force</span></div>
+      <input type="text" class="search" placeholder="O que você está procurando?" />
+      <div class="icons">
+        <a href="#">❤️</a>
+        <a href="#">🛍️</a>
+        <a href="login.html">👤</a>
+      </div>
+    </header>
+
+    <section class="banner">
+      <div class="banner-text">
+        <h2>PROPULSÃO</h2>
+        <p>Coleção de inverno para corrida</p>
+        <button>VER COLEÇÃO</button>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div>📦 Frete grátis na primeira compra*</div>
+      <div>💰 10% de cashback em compras acima de R$ 399,99*</div>
+      <div>🔁 Compre no site e troque em loja*</div>
+      <div>💳 Pague com Pix e ganhe 5% OFF*</div>
+    </section>
+
+    <section class="categorias">
+      <div class="categoria">🏊 NATAÇÃO</div>
+      <div class="categoria">🚴 CICLISMO</div>
+      <div class="categoria">🏃 CORRIDA</div>
+    </section>
+
+    <section class="ofertas-relampago">
+      <h2>OFERTAS RELÂMPAGO</h2>
+      <div class="produtos">
+        <div class="produto">
+          <img src="./Sapatilha.jpg"/>
+          <h3>SAPATILHA TRIATLON FIZIK HYDRA</h3>
+          <p>R$ 1.899,90</p>
+          <p>R$ 1.809,00 COM PIX</p>
+          <p>6x de R$ 316,65 sem juros</p>
+        </div>
+        <div class="produto">
+          <img src="./Bicicleta.jpg"/>
+          <h3>BICICLETA NEW CERVÉLO P5 DISC</h3>
+          <p>R$ 82.990,00</p>
+          <p>R$ 80.499,90 COM PIX</p>
+          <p>12x de R$ 7.499,99 sem juros</p>
+        </div>
+        <div class="produto">
+          <img src="./Tenis.jpg"/>
+          <h3>TÊNIS ADIZERO ADIOS PRO EVO 1</h3>
+          <p>R$ 8.499,90</p>
+          <p>R$ 8.299,90 COM PIX</p>
+          <p>12x de R$ 408,00 sem juros</p>
+        </div>
+      </div>
+    </section>
+
+    <footer style="background-color: #ffffff; color: #555; font-size: 0.9em; padding: 2em 1em 1em; border-top: 2px solid #ff6600;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
+          <div style="flex: 1; min-width: 200px; margin: 1em;">
+            <h4 style="color: #ff6600; margin-bottom: 0.5em;">Atendimento</h4>
+            <ul style="list-style: none; padding: 0;">
+              <li>Fale conosco</li>
+              <li>Central de ajuda</li>
+            </ul>
+          </div>
+          <div style="flex: 1; min-width: 200px; margin: 1em;">
+            <h4 style="color: #ff6600; margin-bottom: 0.5em;">Ajuda</h4>
+            <ul style="list-style: none; padding: 0;">
+              <li>Trocas e devoluções</li>
+              <li>Política de privacidade</li>
+            </ul>
+          </div>
+          <div style="flex: 1; min-width: 200px; margin: 1em;">
+            <h4 style="color: #ff6600; margin-bottom: 0.5em;">Meus pedidos</h4>
+            <ul style="list-style: none; padding: 0;">
+              <li>Acompanhar pedido</li>
+              <li>Cancelamentos</li>
+            </ul>
+          </div>
+          <div style="flex: 1; min-width: 200px; margin: 1em;">
+            <h4 style="color: #ff6600; margin-bottom: 0.5em;">Formas de Pagamento</h4>
+            <ul style="list-style: none; padding: 0;">
+              <li>Visa</li>
+              <li>Mastercard</li>
+              <li>Pix</li>
+              <li>Boleto</li>
+            </ul>
+          </div>
+        </div>
+      
+        <div style="text-align: center; margin-top: 1em;">
+          <a href="#" style="margin: 0 0.5em; font-size: 1.4em; color: #555; text-decoration: none;">📘</a>
+          <a href="#" style="margin: 0 0.5em; font-size: 1.4em; color: #555; text-decoration: none;">🐦</a>
+          <a href="#" style="margin: 0 0.5em; font-size: 1.4em; color: #555; text-decoration: none;">📸</a>
+          <a href="#" style="margin: 0 0.5em; font-size: 1.4em; color: #555; text-decoration: none;">▶️</a>
+        </div>
+      
+        <div style="text-align: center; border-top: 1px solid #ddd; margin-top: 1em; padding-top: 1em; color: #777;">
+          Copyright © 2025 3Force - Todos os direitos reservados.
+        </div>
+      </footer>
+      
+  </div>
+</body>
+</html>
