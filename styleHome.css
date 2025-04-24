@@ -1,0 +1,38 @@
+body{
+    background-color: orange;
+}
+.conteudo {
+    text-align: center;
+  }
+
+.tela{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quadrado {
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    }
+    
+
+h1 {
+    color: rgb(144, 154, 163);
+    font-size: 4rem;
+    text-align: center;
+    }
+
+.bt{
+    display: flex;
+    justify-content: center;
+    align-item
+}
+    

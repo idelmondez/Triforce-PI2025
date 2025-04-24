@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+  }
+
+  .navbar {
+    background-color: #FFA500; /* Fundo laranja */
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar li {
+    padding: 0.5rem 1rem;
+  }
+  
+  .navbar a {
+    color: white; /* Texto branco para contraste */
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    color: #007bff; /* Cor do link ao passar o mouse */
+  }
+  
+
+  h3{
+    margin-top: 50px;
+    margin-left: 455px;
+    border-bottom: 2px solid #FFA500; /* Linha laranja com 2px de espessura */
+    padding-bottom: 0.5rem; /* Adiciona um pequeno espaço entre o texto e a linha */
+    margin-bottom: 1rem; /* Ajuste o espaço abaixo do título */
+    width: 200px;
+  }
+  
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem;
+    border-radius: 0.5rem;
+ 
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  input[type="text"] {
+    padding: 0.5rem;
+    border: 2px solid #FFA500;
+    border-radius: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem auto;
+    max-width: 600px;
+    padding: 0 1rem;
+  }
+  
+  .checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: normal;
+  }
+  
+  .button-wrapper {
+    flex: 1;
+    max-width: 270px; /* mesma largura de um input na grid 2x3 */
+  }
+  
+  button {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: purple;
+    border: none;
+    border-radius: 0;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  
+  
